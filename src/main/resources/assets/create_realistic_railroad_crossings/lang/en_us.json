@@ -1,13 +1,3 @@
 {
-  "itemGroup.create_realistic_railroad_crossings": "Example Mod Tab",
-  "block.create_realistic_railroad_crossings.example_block": "Example Block",
-  "item.create_realistic_railroad_crossings.example_item": "Example Item",
 
-  "create_realistic_railroad_crossings.configuration.title": "Create: Realistic Railroad Crossings Configs",
-  "create_realistic_railroad_crossings.configuration.section.create_realistic_railroad_crossings.common.toml": "Create: Realistic Railroad Crossings Configs",
-  "create_realistic_railroad_crossings.configuration.section.create_realistic_railroad_crossings.common.toml.title": "Create: Realistic Railroad Crossings Configs",
-  "create_realistic_railroad_crossings.configuration.items": "Item List",
-  "create_realistic_railroad_crossings.configuration.logDirtBlock": "Log Dirt Block",
-  "create_realistic_railroad_crossings.configuration.magicNumberIntroduction": "Magic Number Text",
-  "create_realistic_railroad_crossings.configuration.magicNumber": "Magic Number"
 }
