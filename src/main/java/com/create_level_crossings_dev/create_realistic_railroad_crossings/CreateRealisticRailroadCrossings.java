@@ -11,4 +11,5 @@ import net.neoforged.fml.common.Mod;
 public class CreateRealisticRailroadCrossings {
     public static final String MODID = "create_realistic_railroad_crossings";
     public static final Logger LOGGER = LogUtils.getLogger();
+    public static final String ABBREVIATED_MOD_NAME = "CRRC";
 }
