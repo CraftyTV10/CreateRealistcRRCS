@@ -2,55 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>License Agreement</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        h1 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #2c3e50;
-            margin-top: 30px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-        }
-        .license-box {
-            background-color: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-left: 4px solid #007bff;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        .arr-box {
-            border-left-color: #dc3545;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .gpl-text {
-            background-color: #f1f3f5;
-            padding: 20px;
-            font-family: Courier, monospace;
-            font-size: 0.9em;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            border-radius: 4px;
-            border: 1px solid #dee2e6;
-        }
-    </style>
+    <meta charset UTF-8>
 </head>
 <body>
 
