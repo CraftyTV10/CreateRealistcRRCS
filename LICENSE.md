@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h1>License Agreement for [Your Mod Name]</h1>
+    <h1>License Agreement for CreateRealistcRRCS</h1>
     <p>This Minecraft modification utilizes a <strong>split-licensing model</strong>. The source code is open and collaborative, while all visual, auditory, and creative assets remain strictly protected under standard copyright law.</p>
     <p>By downloading, installing, modifying, or distributing this modification, you agree to the following terms and conditions:</p>
 
