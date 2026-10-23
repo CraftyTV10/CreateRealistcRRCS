@@ -1,9 +1,7 @@
 package com.create_level_crossings_dev.create_realistic_railroad_crossings.registry;
 
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.CRRCUtils;
-import com.footdablit2310.footlib.easy_register.FootEasyRegisterSystem;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.CreativeModeTab;
+import com.footdablit2310.footlib.api.easy_register.FootEasyRegisterSystem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
@@ -20,7 +18,7 @@ public class CRRCBlocks {
 		Belgium.register();
 		Soviet.register();
 	}
-	public class Poland {
+	public static class Poland {
 		public static void register() {
 			REGISTRAR.block(
 				"poland_crossing_with_cross",
@@ -29,7 +27,7 @@ public class CRRCBlocks {
 				)
 			)
 				.simpleItem()
-				.creativeTab()
+				.creativeTab(CRRCUtils.MODNAME)
 				.register();
 		}
 	}

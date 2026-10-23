@@ -36,6 +36,13 @@ repositories {
         name = "JEI Backup"
         url = "https://modmaven.dev"
     }
+    maven {
+        name = 'GeckoLib'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroup("software.bernie.geckolib")
+        }
+    }
     mavenCentral()
 }
 
@@ -92,6 +99,8 @@ dependencies {
     runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
     // FootLib
     implementation files("libs/footlib-${footlib_version}.jar")
+
+    implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
 }
 
 tasks.named("build") {
@@ -133,6 +142,7 @@ tasks.withType(ProcessResources).configureEach {
             ponder_version          : ponder_version,
             jei_version             : jei_version,
             footlib_version         : footlib_version,
+            geckolib_version        : geckolib_version
     ]
     inputs.properties replaceProperties
 

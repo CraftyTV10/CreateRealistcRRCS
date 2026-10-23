@@ -1,6 +1,6 @@
 package com.create_level_crossings_dev.create_realistic_railroad_crossings;
 
-import com.footdablit2310.footlib.easy_register.FootEasyRegisterSystem;
+import com.footdablit2310.footlib.api.easy_register.FootEasyRegisterSystem;
 import net.minecraft.world.item.CreativeModeTab;
 import org.slf4j.Logger;
 

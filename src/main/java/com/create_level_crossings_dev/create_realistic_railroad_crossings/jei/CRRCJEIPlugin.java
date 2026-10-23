@@ -13,4 +13,5 @@ public class CRRCJEIPlugin implements IModPlugin {
 	public @NotNull ResourceLocation getPluginUid() {
 		return ResourceLocation.fromNamespaceAndPath(CRRCUtils.MODID, "jei_plugin");
 	}
+	// TODO: Create the plugin.
 }
