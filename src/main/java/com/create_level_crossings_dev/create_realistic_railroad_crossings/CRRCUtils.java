@@ -10,7 +10,6 @@ public class CRRCUtils {
 	public static final String MODNAME = CreateRealisticRailroadCrossings.MODNAME;
 
 	public static final FootEasyRegisterSystem REGISTRAR = CreateRealisticRailroadCrossings.REGISTRAR;
-	public static final CreativeModeTab CREATIVE_MODE_TAB= CreateRealisticRailroadCrossings.CREATIVE_MODE_TAB;
 
 	public static final Logger LOGGER = CreateRealisticRailroadCrossings.LOGGER;
 }

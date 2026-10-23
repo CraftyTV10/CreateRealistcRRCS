@@ -10,37 +10,37 @@ public class CRRCItems {
 		Belgium.register();
 		Soviet.register();
 	}
-	public class Poland {
+	public static class Poland {
 		public static void register() {
 
 		}
 	}
-	public class Serbia {
+	public static class Serbia {
 		public static void register() {
 
 		}
 	}
-	public class Czech {
+	public static class Czech {
 		public static void register() {
 
 		}
 	}
-	public class German {
+	public static class German {
 		public static void register() {
 
 		}
 	}
-	public class Dutch {
+	public static class Dutch {
 		public static void register() {
 
 		}
 	}
-	public class Belgium {
+	public static class Belgium {
 		public static void register() {
 
 		}
 	}
-	public class Soviet {
+	public static class Soviet {
 		public static void register() {
 
 		}
