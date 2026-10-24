@@ -6,7 +6,7 @@ This project is split into two distinct licensing models for source code and ass
 All program source code (specifically all .java files within the repository) is licensed under the GNU General Public License v2.0 (GPLv2).
 
 The full terms and conditions for the GPLv2 can be found in the accompanying file:
-LICENSE-CODE.md
+LICENSE_CODE.md
 
 ---
 
