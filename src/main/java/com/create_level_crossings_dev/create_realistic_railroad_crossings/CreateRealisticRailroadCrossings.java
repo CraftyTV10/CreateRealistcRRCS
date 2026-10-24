@@ -28,8 +28,6 @@ public class CreateRealisticRailroadCrossings {
 
     public static FootEasyRegisterSystem REGISTRAR;
 
-    private DeferredHolder<CreativeModeTab, CreativeModeTab> CREATIVE_MODE_TAB;
-
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public CreateRealisticRailroadCrossings(IEventBus modbus) {
@@ -38,6 +36,6 @@ public class CreateRealisticRailroadCrossings {
         CRRCItems.register();
 
         // Do this last
-        CREATIVE_MODE_TAB = REGISTRAR.registerCreativeTab(new TabConfig(MODNAME, Component.literal(MODNAME), Optional.empty(), true, 89, Optional.empty(), Optional.empty(), Optional.empty()));
+        DeferredHolder<CreativeModeTab, CreativeModeTab> CREATIVE_MODE_TAB = REGISTRAR.registerCreativeTab(new TabConfig(MODNAME, Component.literal(MODNAME), Optional.empty(), true, 89, Optional.empty(), Optional.empty(), Optional.empty()));
     }
 }

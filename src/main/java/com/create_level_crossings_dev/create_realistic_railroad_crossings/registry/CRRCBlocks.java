@@ -2,8 +2,11 @@ package com.create_level_crossings_dev.create_realistic_railroad_crossings.regis
 
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.CRRCUtils;
 import com.footdablit2310.footlib.api.easy_register.FootEasyRegisterSystem;
+import com.footdablit2310.footlib.api.integration.create.CreateMechanicalCraftingJsonUtil;
+import com.simibubi.create.foundation.data.recipe.CreateMixingRecipeGen;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 public class CRRCBlocks {
 
@@ -19,14 +22,17 @@ public class CRRCBlocks {
 		Soviet.register();
 	}
 	public static class Poland {
+		public static DeferredHolder<Block, Block> POLAND_CROSSING_WITH_CROSS_1;
 		public static void register() {
-			REGISTRAR.block(
-				"poland_crossing_with_cross",
-				() -> new Block(
-					BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5)
+
+			POLAND_CROSSING_WITH_CROSS_1 = REGISTRAR.block(
+					"poland_crossing_with_cross_1",
+					() -> new Block(
+						BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5)
+					)
 				)
-			)
 				.simpleItem()
+				.datagen()
 				.creativeTab(CRRCUtils.MODNAME)
 				.register();
 		}
