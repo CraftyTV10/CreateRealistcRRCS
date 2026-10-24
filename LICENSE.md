@@ -5,7 +5,7 @@ This project is split into two distinct licensing models for source code and ass
 ## 1. Source Code (GPLv2)
 All program source code (specifically all .java files within the repository) is licensed under the GNU General Public License v2.0 (GPLv2).
 
-The full terms and conditions for the GPLv2 can be found in the accompanying file:
+The full terms and conditions for the GPLv2 license can be found in the accompanying file:
 LICENSE_CODE.md
 
 ---
@@ -14,6 +14,9 @@ LICENSE_CODE.md
 Copyright (C) 2026 Levels Crossing Dev. All Rights Reserved.
 
 ALL assets, textures, models, animations, and sound files contained in this repository are strictly protected under All Rights Reserved UNLESS stated otherwise.
+
+The full terms and conditions for the ARR license can be found in the accompanying file:
+LICENSE_ASSETS.md
 
 ### Exceptions for Assets:
 If an asset is NOT covered by All Rights Reserved, it will be explicitly documented below or accompanied by a local license note in its respective directory:
