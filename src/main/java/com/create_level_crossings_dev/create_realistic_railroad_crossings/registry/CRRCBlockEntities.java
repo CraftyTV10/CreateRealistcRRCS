@@ -23,6 +23,7 @@ public class CRRCBlockEntities {
 		public static void register() {
 			POLAND_CROSSING_WITH_CROSS = REGISTRAR.blockEntity("poland_crossings_with_cross", PolandCrossingsWithCrossBlockEntity::new)
 				.validBlock(CRRCBlocks.Poland.POLAND_CROSSING_WITH_CROSS_1)
+				.validBlock(CRRCBlocks.Poland.POLAND_CROSSING_WITH_CROSS_2)
 				.register();
 		}
 	}

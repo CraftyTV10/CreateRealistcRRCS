@@ -23,10 +23,21 @@ public class CRRCBlocks {
 	}
 	public static class Poland {
 		public static DeferredHolder<Block, Block> POLAND_CROSSING_WITH_CROSS_1;
+		public static DeferredHolder<Block, Block> POLAND_CROSSING_WITH_CROSS_2;
 		public static void register() {
-
 			POLAND_CROSSING_WITH_CROSS_1 = REGISTRAR.block(
 					"poland_crossing_with_cross_1",
+					() -> new Block(
+						BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5)
+					)
+				)
+				.simpleItem()
+				.datagen()
+				.creativeTab(CRRCUtils.MODNAME)
+				.register();
+
+			POLAND_CROSSING_WITH_CROSS_2 = REGISTRAR.block(
+					"poland_crossing_with_cross_2",
 					() -> new Block(
 						BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5)
 					)
