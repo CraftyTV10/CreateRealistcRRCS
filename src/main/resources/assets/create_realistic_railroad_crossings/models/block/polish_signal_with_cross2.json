@@ -1,0 +1,6 @@
+{
+    "loader": "neoforge:obj",
+    "model": "create_realistic_railroad_crossings:models/polish_signal_with_cross2.obj",
+    "automatic_culling": false,
+    "shade_quads": true
+}

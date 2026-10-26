@@ -12,4 +12,8 @@ public class CRRCUtils {
 	public static final FootEasyRegisterSystem REGISTRAR = CreateRealisticRailroadCrossings.REGISTRAR;
 
 	public static final Logger LOGGER = CreateRealisticRailroadCrossings.LOGGER;
+
+	public static String logPrefix(String location) {
+		return "[" + CRRCUtils.MODNAME + "][" + location + "]";
+	}
 }

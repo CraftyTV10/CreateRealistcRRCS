@@ -2,8 +2,6 @@ package com.create_level_crossings_dev.create_realistic_railroad_crossings.regis
 
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.CRRCUtils;
 import com.footdablit2310.footlib.api.easy_register.FootEasyRegisterSystem;
-import com.footdablit2310.footlib.api.integration.create.CreateMechanicalCraftingJsonUtil;
-import com.simibubi.create.foundation.data.recipe.CreateMixingRecipeGen;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -13,7 +11,7 @@ public class CRRCBlocks {
 	public static final FootEasyRegisterSystem REGISTRAR = CRRCUtils.REGISTRAR;
 
 	public static void register() {
-		Poland.register();
+		Polish.register();
 		Serbia.register();
 		Czech.register();
 		German.register();
@@ -21,12 +19,12 @@ public class CRRCBlocks {
 		Belgium.register();
 		Soviet.register();
 	}
-	public static class Poland {
-		public static DeferredHolder<Block, Block> POLAND_CROSSING_WITH_CROSS_1;
-		public static DeferredHolder<Block, Block> POLAND_CROSSING_WITH_CROSS_2;
+	public static class Polish {
+		public static DeferredHolder<Block, Block> POLISH_CROSSING_WITH_CROSS_1;
+		public static DeferredHolder<Block, Block> POLISH_CROSSING_WITH_CROSS_2;
 		public static void register() {
-			POLAND_CROSSING_WITH_CROSS_1 = REGISTRAR.block(
-					"poland_crossing_with_cross_1",
+			POLISH_CROSSING_WITH_CROSS_1 = REGISTRAR.block(
+					"polish_crossing_with_cross_1",
 					() -> new Block(
 						BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5)
 					)
@@ -36,8 +34,8 @@ public class CRRCBlocks {
 				.creativeTab(CRRCUtils.MODNAME)
 				.register();
 
-			POLAND_CROSSING_WITH_CROSS_2 = REGISTRAR.block(
-					"poland_crossing_with_cross_2",
+			POLISH_CROSSING_WITH_CROSS_2 = REGISTRAR.block(
+					"polish_crossing_with_cross_2",
 					() -> new Block(
 						BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5)
 					)

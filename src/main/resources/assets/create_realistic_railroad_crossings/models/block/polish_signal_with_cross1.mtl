@@ -1,0 +1,21 @@
+# ------------------------------------------------------------------
+# The Saviour
+# https://github.com/neoforged/NeoForge/blob/1.21.1/src/main/java/net/neoforged/neoforge/client/model/obj/ObjMaterialLibrary.java#L52
+#
+# NeoForge OBJ models support tint indices through MTL files.
+# Found after an unreasonable amount of R&D.
+# ------------------------------------------------------------------
+
+newmtl housing
+Kd 1.000 1.000 1.000
+map_Kd create_realistic_railroad_crossings:block/polish_signal_with_cross1
+
+newmtl light_left
+Kd 1.000 1.000 1.000
+map_Kd create_realistic_railroad_crossings:block/polish_signal_with_cross1
+neoforge_TintIndex 0
+
+newmtl light_right
+Kd 1.000 1.000 1.000
+map_Kd create_realistic_railroad_crossings:block/polish_signal_with_cross1
+neoforge_TintIndex 1
