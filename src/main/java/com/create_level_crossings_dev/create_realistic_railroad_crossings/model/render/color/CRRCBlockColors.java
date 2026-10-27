@@ -73,6 +73,9 @@ public final class CRRCBlockColors {
 		@Nullable BlockPos pos,
 		int tintIndex
 	) {
+		if (!state.hasProperty(CRRCBlockStateProperties.DUAL_LIGHT_STATUS)) {
+			return 0xFFFFFFFF;
+		}
 		if (tintIndex < 0) {
 			return 0xFFFFFFFF;
 		}

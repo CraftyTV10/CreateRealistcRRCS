@@ -11,6 +11,8 @@ import org.jetbrains.annotations.NotNull;
 
 public class PolishCrossingsWithCrossBlockEntity extends BlockEntity {
 
+	private boolean audioOn = false;
+
 	private static final int CYCLE_LENGTH = 20;
 
 	/**
@@ -57,6 +59,10 @@ public class PolishCrossingsWithCrossBlockEntity extends BlockEntity {
 					),
 					3
 				);
+			}
+			if (be.audioOn) {
+				//TODO: Sound disable
+				be.audioOn = false;
 			}
 
 			return;

@@ -1,14 +1,17 @@
 package com.create_level_crossings_dev.create_realistic_railroad_crossings;
 
+import com.create_level_crossings_dev.create_realistic_railroad_crossings.lang.CRRCLanguageProvider;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCBlocks;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCItems;
 import com.footdablit2310.footlib.api.easy_register.FootEasyRegisterSystem;
 import com.footdablit2310.footlib.api.easy_register.config.TabConfig;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import org.slf4j.Logger;
 
@@ -36,6 +39,27 @@ public class CreateRealisticRailroadCrossings {
         CRRCItems.register();
 
         // Do this last
-        DeferredHolder<CreativeModeTab, CreativeModeTab> CREATIVE_MODE_TAB = REGISTRAR.registerCreativeTab(new TabConfig(MODNAME, Component.literal(MODNAME), Optional.empty(), true, 89, Optional.empty(), Optional.empty(), Optional.empty()));
+        DeferredHolder<CreativeModeTab, CreativeModeTab> CREATIVE_MODE_TAB = REGISTRAR.registerCreativeTab(
+            new TabConfig(
+                MODID+"_creative_mode_tab",
+                Component.literal(MODNAME),
+                Optional.empty(),
+                true,
+                89,
+                Optional.empty(),
+                Optional.empty(),
+                Optional.empty()
+            )
+        );
+    }
+
+    @SubscribeEvent
+    public static void gatherData(GatherDataEvent event) {
+        DataGenerator generator = event.getGenerator();
+        PackOutput output = generator.getPackOutput();
+        generator.addProvider(
+            event.includeClient(),
+            new CRRCLanguageProvider(output)
+        );
     }
 }

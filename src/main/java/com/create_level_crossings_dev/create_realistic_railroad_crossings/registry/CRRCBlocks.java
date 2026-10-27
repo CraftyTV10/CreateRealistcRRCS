@@ -30,8 +30,7 @@ public class CRRCBlocks {
 					)
 				)
 				.simpleItem()
-				.datagen()
-				.creativeTab(CRRCUtils.MODNAME)
+				.creativeTab(CRRCUtils.CREATIVE_MODE_TAB_NAME)
 				.register();
 
 			POLISH_CROSSING_WITH_CROSS_2 = REGISTRAR.block(
@@ -41,8 +40,7 @@ public class CRRCBlocks {
 					)
 				)
 				.simpleItem()
-				.datagen()
-				.creativeTab(CRRCUtils.MODNAME)
+				.creativeTab(CRRCUtils.CREATIVE_MODE_TAB_NAME)
 				.register();
 		}
 	}
