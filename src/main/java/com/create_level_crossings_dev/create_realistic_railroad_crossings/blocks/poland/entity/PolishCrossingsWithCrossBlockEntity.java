@@ -38,8 +38,8 @@ public class PolishCrossingsWithCrossBlockEntity extends BlockEntity {
 	public static void tick(
 		Level level,
 		BlockPos pos,
-		BlockState state,
-		PolishCrossingsWithCrossBlockEntity be
+		@NotNull BlockState state,
+		@NotNull PolishCrossingsWithCrossBlockEntity be
 	) {
 
 		be.updateRedstone();

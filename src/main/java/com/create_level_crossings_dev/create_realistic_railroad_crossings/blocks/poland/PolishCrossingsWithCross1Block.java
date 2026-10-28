@@ -17,9 +17,11 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Objects;
+
 public class PolishCrossingsWithCross1Block extends Block {
 
-	public static final EnumProperty<DualLightStatus> DUAL_LIGHT_STATUS = CRRCBlockStateProperties.DUAL_LIGHT_STATUS;
+	public static final EnumProperty<DualLightStatus> DUAL_LIGHT_STATUS = Objects.requireNonNull(CRRCBlockStateProperties.DUAL_LIGHT_STATUS);
 
 	public PolishCrossingsWithCross1Block(BlockBehaviour.Properties properties) {
 		super(properties);

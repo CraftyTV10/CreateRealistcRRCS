@@ -1,6 +1,8 @@
 package com.create_level_crossings_dev.create_realistic_railroad_crossings.registry;
 
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.CRRCUtils;
+import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.PolishCrossingsWithCross1Block;
+import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.PolishCrossingsWithCross2Block;
 import com.footdablit2310.footlib.api.easy_register.FootEasyRegisterSystem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -20,12 +22,12 @@ public class CRRCBlocks {
 		Soviet.register();
 	}
 	public static class Polish {
-		public static DeferredHolder<Block, Block> POLISH_CROSSING_WITH_CROSS_1;
-		public static DeferredHolder<Block, Block> POLISH_CROSSING_WITH_CROSS_2;
+		public static DeferredHolder<Block, PolishCrossingsWithCross1Block> POLISH_CROSSING_WITH_CROSS_1;
+		public static DeferredHolder<Block, PolishCrossingsWithCross2Block> POLISH_CROSSING_WITH_CROSS_2;
 		public static void register() {
 			POLISH_CROSSING_WITH_CROSS_1 = REGISTRAR.block(
 					"polish_crossing_with_cross_1",
-					() -> new Block(
+					() -> new PolishCrossingsWithCross1Block(
 						BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5)
 					)
 				)
@@ -35,7 +37,7 @@ public class CRRCBlocks {
 
 			POLISH_CROSSING_WITH_CROSS_2 = REGISTRAR.block(
 					"polish_crossing_with_cross_2",
-					() -> new Block(
+					() -> new PolishCrossingsWithCross2Block(
 						BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5)
 					)
 				)
