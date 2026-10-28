@@ -29,9 +29,9 @@ public class PolishCrossingsWithCross1Block extends Block {
 	}
 
 	@Override
-	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
+	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		// this is where the properties are actually added to the state
-		pBuilder.add(DUAL_LIGHT_STATUS);
+		builder.add(DUAL_LIGHT_STATUS);
 	}
 
 	@Override

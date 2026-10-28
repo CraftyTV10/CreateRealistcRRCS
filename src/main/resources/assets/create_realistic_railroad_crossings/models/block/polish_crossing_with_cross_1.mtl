@@ -8,14 +8,14 @@
 
 newmtl housing
 Kd 1.000 1.000 1.000
-map_Kd create_realistic_railroad_crossings:block/polish_signal_with_cross2
+map_Kd create_realistic_railroad_crossings:block/polish_crossing_with_cross_1
 
-newmtl left_lens
+newmtl light_left
 Kd 1.000 1.000 1.000
-map_Kd create_realistic_railroad_crossings:block/polish_signal_with_cross2
+map_Kd create_realistic_railroad_crossings:block/polish_crossing_with_cross_1
 neoforge_TintIndex 0
 
-newmtl right_lens
+newmtl light_right
 Kd 1.000 1.000 1.000
-map_Kd create_realistic_railroad_crossings:block/polish_signal_with_cross2
+map_Kd create_realistic_railroad_crossings:block/polish_crossing_with_cross_1
 neoforge_TintIndex 1

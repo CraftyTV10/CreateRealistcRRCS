@@ -1,4 +1,4 @@
-package com.create_level_crossings_dev.create_realistic_railroad_crossings.lang;
+package com.create_level_crossings_dev.create_realistic_railroad_crossings.datagen.lang;
 
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.CRRCUtils;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCBlocks;

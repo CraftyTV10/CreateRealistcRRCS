@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "dual_light_status=left_light_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_2" },
+        "dual_light_status=left_light_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_2" },
+        "dual_light_status=right_light_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_2" },
+        "dual_light_status=right_light_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_2" },
+        "dual_light_status=both_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_2" },
+        "dual_light_status=both_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_2" },
+        "dual_light_status=both_off": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_2" }
+    }
+}

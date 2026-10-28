@@ -1,6 +1,6 @@
 package com.create_level_crossings_dev.create_realistic_railroad_crossings;
 
-import com.create_level_crossings_dev.create_realistic_railroad_crossings.lang.CRRCLanguageProvider;
+import com.create_level_crossings_dev.create_realistic_railroad_crossings.datagen.lang.CRRCLanguageProvider;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCBlocks;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCItems;
 import com.footdablit2310.footlib.api.easy_register.FootEasyRegisterSystem;
