@@ -17,4 +17,7 @@ public class CRRCUtils {
 	public static String logPrefix(String location) {
 		return "[" + CRRCUtils.MODNAME + "][" + location + "]";
 	}
+	public static String lazyLogPrefix(String locationWithoutModPrefix) {
+		return "[" + CRRCUtils.MODNAME + "][" + ABBREVIATED_MOD_NAME + locationWithoutModPrefix + "]";
+	}
 }

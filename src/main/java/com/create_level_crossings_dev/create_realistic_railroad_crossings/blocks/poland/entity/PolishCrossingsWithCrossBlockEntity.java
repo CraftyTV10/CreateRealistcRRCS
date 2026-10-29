@@ -3,7 +3,9 @@ package com.create_level_crossings_dev.create_realistic_railroad_crossings.block
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.state_properties.CRRCBlockStateProperties;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.state_properties.DualLightStatus;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCBlockEntities;
+import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCSoundEvents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -40,6 +42,9 @@ public class PolishCrossingsWithCrossBlockEntity extends BlockEntity {
 		@NotNull PolishCrossingsWithCrossBlockEntity be
 	) {
 
+		if (level == null) {
+			return;
+		}
 		be.updateRedstone();
 
 		DualLightStatus currentStatus =
@@ -61,7 +66,6 @@ public class PolishCrossingsWithCrossBlockEntity extends BlockEntity {
 				);
 			}
 			if (be.audioOn) {
-				//TODO: Sound disable
 				be.audioOn = false;
 			}
 
@@ -89,7 +93,22 @@ public class PolishCrossingsWithCrossBlockEntity extends BlockEntity {
 			);
 		}
 
-		// TODO: Crossing bell / gate audio
+		if (!be.isPowered()) {
+			be.audioOn = false;
+		} else if (be.tickCounter == 1) {
+			be.audioOn = true;
+		}
+
+		if (be.audioOn && be.tickCounter == 1) {
+			level.playSound(
+				null,
+				pos.above(2),
+				CRRCSoundEvents.POLISH_CROSSING_WITH_CROSS.get(),
+				net.minecraft.sounds.SoundSource.BLOCKS,
+				1.0F,
+				1.0F
+			);
+		}
 	}
 
 	private static @NotNull DualLightStatus getTargetStatus(

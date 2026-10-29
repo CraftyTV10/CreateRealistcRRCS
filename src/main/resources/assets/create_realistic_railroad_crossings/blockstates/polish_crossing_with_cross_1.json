@@ -1,11 +1,36 @@
 {
     "variants": {
-        "dual_light_status=left_light_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1" },
-        "dual_light_status=left_light_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1" },
-        "dual_light_status=right_light_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1" },
-        "dual_light_status=right_light_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1" },
-        "dual_light_status=both_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1" },
-        "dual_light_status=both_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1" },
-        "dual_light_status=both_off": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1" }
+        "facing=north,dual_light_status=left_light_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 0 },
+        "facing=north,dual_light_status=left_light_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 0 },
+        "facing=north,dual_light_status=right_light_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 0 },
+        "facing=north,dual_light_status=right_light_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 0 },
+        "facing=north,dual_light_status=both_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 0 },
+        "facing=north,dual_light_status=both_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 0 },
+        "facing=north,dual_light_status=both_off": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 0 },
+
+        "facing=east,dual_light_status=left_light_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 90 },
+        "facing=east,dual_light_status=left_light_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 90 },
+        "facing=east,dual_light_status=right_light_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 90 },
+        "facing=east,dual_light_status=right_light_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 90 },
+        "facing=east,dual_light_status=both_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 90 },
+        "facing=east,dual_light_status=both_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 90 },
+        "facing=east,dual_light_status=both_off": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 90 },
+
+        "facing=south,dual_light_status=left_light_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 180 },
+        "facing=south,dual_light_status=left_light_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 180 },
+        "facing=south,dual_light_status=right_light_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 180 },
+        "facing=south,dual_light_status=right_light_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 180 },
+        "facing=south,dual_light_status=both_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 180 },
+        "facing=south,dual_light_status=both_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 180 },
+        "facing=south,dual_light_status=both_off": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 180 },
+
+        "facing=west,dual_light_status=left_light_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 270 },
+        "facing=west,dual_light_status=left_light_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 270 },
+        "facing=west,dual_light_status=right_light_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 270 },
+        "facing=west,dual_light_status=right_light_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 270 },
+        "facing=west,dual_light_status=both_on": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 270 },
+        "facing=west,dual_light_status=both_dim": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 270 },
+        "facing=west,dual_light_status=both_off": { "model": "create_realistic_railroad_crossings:block/polish_crossing_with_cross_1", "y": 270 }
+
     }
 }

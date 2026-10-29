@@ -1,0 +1,16 @@
+{
+    "polish_crossing_with_cross": {
+        "sounds": [
+            {
+                "name": "create_realistic_railroad_crossings:polish_crossing_with_cross",
+                "type": "file",
+                "volume": 1.0,
+                "pitch": 1.0,
+                "weight": 1,
+                "stream": false,
+                "attenuation_distance": 32,
+                "preload": true
+            }
+        ]
+    }
+}
