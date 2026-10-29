@@ -3,5 +3,9 @@
     "model": "create_realistic_railroad_crossings:models/block/polish_crossing_with_cross_1.obj",
     "mtl_override": "create_realistic_railroad_crossings:models/block/polish_crossing_with_cross_1.mtl",
     "automatic_culling": false,
-    "shade_quads": true
+    "shade_quads": true,
+    "flip_v": true,
+    "transform": {
+        "translation": [0.5, 0.0, 0.5]
+    }
 }
