@@ -7,6 +7,7 @@ import com.create_level_crossings_dev.create_realistic_railroad_crossings.regist
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -19,7 +20,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
 
-public class PolishCrossingsWithCross2Block extends Block {
+public class PolishCrossingsWithCross2Block extends Block implements EntityBlock {
 
 	public static final EnumProperty<DualLightStatus> DUAL_LIGHT_STATUS = Objects.requireNonNull(CRRCBlockStateProperties.DUAL_LIGHT_STATUS);
 
@@ -55,13 +56,18 @@ public class PolishCrossingsWithCross2Block extends Block {
 		super.neighborChanged(state, level, pos, neighborBlock, neighborPos, movedByPiston);
 	}
 
+	@Override
+	public @Nullable BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
+		return new PolishCrossingsWithCrossBlockEntity(pos, state);
+	}
+
 	private static <E extends BlockEntity, A extends BlockEntity> @Nullable BlockEntityTicker<A> createTickerHelper(
 		BlockEntityType<A> type, BlockEntityType<E> checkedType, BlockEntityTicker<? super E> ticker
 	) {
 		return checkedType == type ? (BlockEntityTicker<A>) ticker : null;
 	}
 
-	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
+	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(@NotNull Level level, @NotNull BlockState state, @NotNull BlockEntityType<T> type) {
 		return createTickerHelper(type, CRRCBlockEntities.Polish.POLISH_CROSSING_WITH_CROSS.get(), PolishCrossingsWithCrossBlockEntity::tick);
 	}
 }
