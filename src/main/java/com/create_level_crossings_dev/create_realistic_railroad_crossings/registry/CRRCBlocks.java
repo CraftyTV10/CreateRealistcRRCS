@@ -28,7 +28,7 @@ public class CRRCBlocks {
 			POLISH_CROSSING_WITH_CROSS_1 = REGISTRAR.block(
 					"polish_crossing_with_cross_1",
 					() -> new PolishCrossingsWithCross1Block(
-						BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5)
+						BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5).noOcclusion()
 					)
 				)
 				.simpleItem()
@@ -38,7 +38,7 @@ public class CRRCBlocks {
 			POLISH_CROSSING_WITH_CROSS_2 = REGISTRAR.block(
 					"polish_crossing_with_cross_2",
 					() -> new PolishCrossingsWithCross2Block(
-						BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5)
+						BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5).noOcclusion()
 					)
 				)
 				.simpleItem()

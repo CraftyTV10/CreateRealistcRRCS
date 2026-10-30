@@ -4,7 +4,7 @@ If invert Y must be enabled to make the model work then add the flag:
 ```
 "flip_v":true
 ``` 
-inside the json.
+inside the JSON.
 
 If the model is off center use:
 ```
@@ -12,3 +12,4 @@ If the model is off center use:
     "translation": [0.5, 0.0, 0.5]
 }
 ```
+If neighboring blocks lets you xray when placed adjacent to a block, add the flag, noOcclusion() to the BlockBehaviour.Properties in your registration class.
