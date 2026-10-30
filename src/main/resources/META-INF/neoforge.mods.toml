@@ -45,7 +45,7 @@ IDK
 [[dependencies.${mod_id}]]
     modId = "footlib"
     type = "required"
-    versionRange = "*"
+    versionRange = "[1.0.0.0, 2.0.0.0)"
     ordering = "NONE"
     side = "BOTH"
 

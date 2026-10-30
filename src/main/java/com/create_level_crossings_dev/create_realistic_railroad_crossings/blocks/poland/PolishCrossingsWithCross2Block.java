@@ -4,9 +4,11 @@ import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.state_properties.CRRCBlockStateProperties;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.state_properties.DualLightStatus;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCBlockEntities;
+import com.footdablit2310.footlib.api.common.hitbox.VoxelShapeRotationUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
@@ -18,15 +20,49 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Map;
 import java.util.Objects;
 
 public class PolishCrossingsWithCross2Block extends Block implements EntityBlock {
 
 	public static final EnumProperty<DualLightStatus> DUAL_LIGHT_STATUS = Objects.requireNonNull(CRRCBlockStateProperties.DUAL_LIGHT_STATUS);
 	public static final EnumProperty<Direction> FACING = Objects.requireNonNull(BlockStateProperties.HORIZONTAL_FACING);
+
+	public static final @NotNull VoxelShape BASE = Block.box(
+		-5, 0, -5,
+		5, 1, 5
+	);
+
+	public static final @NotNull VoxelShape POLE = Block.box(
+		-1, 0, -1,
+		1, 54, 1
+	);
+
+	public static final @NotNull VoxelShape HOUSING = Block.box(
+		-11, 32, -4,
+		11, 42, 2
+	);
+
+	public static final @NotNull VoxelShape CROSSBUCKS = Block.box(
+		-10, 42, -2,
+		10, 57, 0
+	);
+
+	public static final @NotNull VoxelShape SHAPE = Shapes.or(
+		BASE,
+		POLE,
+		HOUSING,
+		CROSSBUCKS
+	).move(0.5, 0, 0.5);
+
+	private static final Map<Direction, VoxelShape> ROTATED_SHAPES = VoxelShapeRotationUtil.cacheRotations(SHAPE);
+
 
 	public PolishCrossingsWithCross2Block(BlockBehaviour.Properties properties) {
 		super(properties);
@@ -83,5 +119,23 @@ public class PolishCrossingsWithCross2Block extends Block implements EntityBlock
 			FACING,
 			context.getHorizontalDirection().getOpposite()
 		);
+	}
+
+	@Override
+	public @NotNull VoxelShape getShape(
+		BlockState state,
+		@NotNull BlockGetter level,
+		@NotNull BlockPos pos,
+		@NotNull CollisionContext context) {
+		return ROTATED_SHAPES.get(state.getValue(FACING));
+	}
+
+	@Override
+	public @NotNull VoxelShape getCollisionShape(
+		@NotNull BlockState state,
+		@NotNull BlockGetter level,
+		@NotNull BlockPos pos,
+		@NotNull CollisionContext context) {
+		return ROTATED_SHAPES.get(state.getValue(FACING));
 	}
 }
