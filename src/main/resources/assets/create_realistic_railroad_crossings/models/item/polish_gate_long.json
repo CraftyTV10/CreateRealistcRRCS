@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "create_realistic_railroad_crossings:block/polish_gate_long"
+  }
+}

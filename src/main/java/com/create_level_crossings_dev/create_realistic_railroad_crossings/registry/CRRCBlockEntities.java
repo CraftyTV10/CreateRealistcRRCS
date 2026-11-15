@@ -2,6 +2,7 @@ package com.create_level_crossings_dev.create_realistic_railroad_crossings.regis
 
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.CRRCUtils;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.entity.PolishCrossingsWithCrossBlockEntity;
+import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.entity.PolishGateBlockEntity;
 import com.footdablit2310.footlib.api.easy_register.FootEasyRegisterSystem;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -19,11 +20,14 @@ public class CRRCBlockEntities {
 		Soviet.register();
 	}
 	public static class Polish {
-		public static DeferredHolder<BlockEntityType<?>, BlockEntityType<PolishCrossingsWithCrossBlockEntity>> POLISH_CROSSING_WITH_CROSS;
+        public static DeferredHolder<BlockEntityType<?>, BlockEntityType<PolishGateBlockEntity>> POLISH_GATE;
+        public static DeferredHolder<BlockEntityType<?>, BlockEntityType<PolishCrossingsWithCrossBlockEntity>> POLISH_CROSSING_WITH_CROSS;
 		public static void register() {
 			POLISH_CROSSING_WITH_CROSS = REGISTRAR.blockEntity("polish_crossings_with_cross", PolishCrossingsWithCrossBlockEntity::new)
-				.validBlock(CRRCBlocks.Polish.POLISH_CROSSING_WITH_CROSS_1)
-				.validBlock(CRRCBlocks.Polish.POLISH_CROSSING_WITH_CROSS_2)
+				.validBlocks(CRRCBlocks.Polish.POLISH_CROSSING_WITH_CROSS_1, CRRCBlocks.Polish.POLISH_CROSSING_WITH_CROSS_2)
+				.register();
+			POLISH_GATE = REGISTRAR.blockEntity("polish_gate", PolishGateBlockEntity::new)
+				.validBlocks(CRRCBlocks.Polish.POLISH_GATE, CRRCBlocks.Polish.POLISH_GATE_LONG)
 				.register();
 		}
 	}

@@ -1,0 +1,104 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"Zamykanie": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 4.25,
+			"bones": {
+				"szlaban": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"2.75": {
+							"vector": [0, 0, 90],
+							"easing": "easeInSine"
+						},
+						"2.7917": {
+							"vector": [0, 0, 90]
+						},
+						"3.125": {
+							"pre": {
+								"vector": [0, 0, 87.5]
+							},
+							"post": {
+								"vector": [0, 0, 87.5]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"3.375": {
+							"post": {
+								"vector": [0, 0, 87.5]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"3.875": {
+							"post": {
+								"vector": [0, 0, 90]
+							},
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"Stopka": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"2.75": {
+							"vector": [0, 0, -90]
+						},
+						"3.125": {
+							"vector": [0, 0, -87.5]
+						},
+						"3.875": {
+							"vector": [0, 0, -90]
+						}
+					}
+				}
+			}
+		},
+		"Otwarcie": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 4,
+			"bones": {
+				"szlaban": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 90]
+						},
+						"2.75": {
+							"vector": [0, 0, 0],
+							"easing": "easeInSine"
+						},
+						"3.25": {
+							"vector": [0, 0, -2.5],
+							"easing": "easeOutQuart"
+						},
+						"3.75": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"Stopka": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -90]
+						},
+						"1.5": {
+							"vector": [0, 0, -58.41],
+							"easing": "easeInSine"
+						},
+						"2.75": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"3.5": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}

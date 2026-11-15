@@ -38,7 +38,7 @@ public class CreateRealisticRailroadCrossings {
         // Do this last
 	    REGISTRAR.registerCreativeTab(
 		    new TabConfig(
-			    MODID + "_creative_mode_tab",
+                "create_realistic_railroad_crossings_creative_mode_tab",
 			    Component.literal(MODNAME),
 			    Optional.empty(),
 			    true,

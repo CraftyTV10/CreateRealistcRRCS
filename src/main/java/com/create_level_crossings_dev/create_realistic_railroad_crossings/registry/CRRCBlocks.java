@@ -3,6 +3,8 @@ package com.create_level_crossings_dev.create_realistic_railroad_crossings.regis
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.CRRCUtils;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.PolishCrossingsWithCross1Block;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.PolishCrossingsWithCross2Block;
+import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.PolishGateBlock;
+import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.PolishGateLongBlock;
 import com.footdablit2310.footlib.api.easy_register.FootEasyRegisterSystem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -22,7 +24,9 @@ public class CRRCBlocks {
 		Soviet.register();
 	}
 	public static class Polish {
-		public static DeferredHolder<Block, PolishCrossingsWithCross1Block> POLISH_CROSSING_WITH_CROSS_1;
+        public static DeferredHolder<Block, PolishGateBlock> POLISH_GATE;
+		public static DeferredHolder<Block, PolishGateLongBlock> POLISH_GATE_LONG;
+        public static DeferredHolder<Block, PolishCrossingsWithCross1Block> POLISH_CROSSING_WITH_CROSS_1;
 		public static DeferredHolder<Block, PolishCrossingsWithCross2Block> POLISH_CROSSING_WITH_CROSS_2;
 		public static void register() {
 			POLISH_CROSSING_WITH_CROSS_1 = REGISTRAR.block(
@@ -30,20 +34,26 @@ public class CRRCBlocks {
 					() -> new PolishCrossingsWithCross1Block(
 						BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5).noOcclusion()
 					)
-				)
-				.simpleItem()
-				.creativeTab(CRRCUtils.CREATIVE_MODE_TAB_NAME)
-				.register();
+			).simpleItem().creativeTab(CRRCUtils.CREATIVE_MODE_TAB_NAME).register();
 
 			POLISH_CROSSING_WITH_CROSS_2 = REGISTRAR.block(
 					"polish_crossing_with_cross_2",
 					() -> new PolishCrossingsWithCross2Block(
 						BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5).noOcclusion()
 					)
-				)
-				.simpleItem()
-				.creativeTab(CRRCUtils.CREATIVE_MODE_TAB_NAME)
-				.register();
+			).simpleItem().creativeTab(CRRCUtils.CREATIVE_MODE_TAB_NAME).register();
+			POLISH_GATE = REGISTRAR.block(
+					"polish_gate",
+					() -> new PolishGateBlock(
+							BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5).noOcclusion()
+					)
+			).simpleItem().creativeTab(CRRCUtils.CREATIVE_MODE_TAB_NAME).register();
+			POLISH_GATE_LONG = REGISTRAR.block(
+					"polish_gate_long",
+					() -> new PolishGateLongBlock(
+							BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5).noOcclusion()
+					)
+			).simpleItem().creativeTab(CRRCUtils.CREATIVE_MODE_TAB_NAME).register();
 		}
 	}
 	public static class Serbia {
