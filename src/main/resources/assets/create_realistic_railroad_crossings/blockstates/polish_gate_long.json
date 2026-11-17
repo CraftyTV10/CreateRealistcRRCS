@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "create_realistic_railroad_crossings:block/polish_gate_long", "y": 0 },
-    "facing=east": { "model": "create_realistic_railroad_crossings:block/polish_gate_long", "y": 90 },
-    "facing=south": { "model": "create_realistic_railroad_crossings:block/polish_gate_long", "y": 180 },
-    "facing=west": { "model": "create_realistic_railroad_crossings:block/polish_gate_long", "y": 270 }
-  }
-}

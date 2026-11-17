@@ -8,8 +8,8 @@ use underscores ("light_left") to match the MTL file.
 """
 
 # ----------------------------- CONFIG -----------------------------
-INPUT_OBJ  = "polish_signal_with_cross1.obj"
-OUTPUT_OBJ = "polish_signal_with_cross1_patched.obj"
+INPUT_OBJ  = "polish_signal_with_cross_2_old.obj"
+OUTPUT_OBJ = "polish_signal_with_cross_2.obj"
 
 # OBJ object name (in 'o <name>' lines)  ->  material name for 'usemtl'
 MATERIAL_FOR_OBJECT = {

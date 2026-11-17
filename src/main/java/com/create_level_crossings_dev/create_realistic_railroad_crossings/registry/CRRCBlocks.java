@@ -1,8 +1,8 @@
 package com.create_level_crossings_dev.create_realistic_railroad_crossings.registry;
 
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.CRRCUtils;
-import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.PolishCrossingsWithCross1Block;
-import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.PolishCrossingsWithCross2Block;
+import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.PolishSignalWithCross1Block;
+import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.PolishSignalWithCross2Block;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.PolishGateBlock;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.PolishGateLongBlock;
 import com.footdablit2310.footlib.api.easy_register.FootEasyRegisterSystem;
@@ -26,19 +26,20 @@ public class CRRCBlocks {
 	public static class Polish {
         public static DeferredHolder<Block, PolishGateBlock> POLISH_GATE;
 		public static DeferredHolder<Block, PolishGateLongBlock> POLISH_GATE_LONG;
-        public static DeferredHolder<Block, PolishCrossingsWithCross1Block> POLISH_CROSSING_WITH_CROSS_1;
-		public static DeferredHolder<Block, PolishCrossingsWithCross2Block> POLISH_CROSSING_WITH_CROSS_2;
+        public static DeferredHolder<Block, PolishSignalWithCross1Block> POLISH_SIGNAL_WITH_CROSS_1;
+		public static DeferredHolder<Block, PolishSignalWithCross2Block> POLISH_SIGNAL_WITH_CROSS_2;
+
 		public static void register() {
-			POLISH_CROSSING_WITH_CROSS_1 = REGISTRAR.block(
-					"polish_crossing_with_cross_1",
-					() -> new PolishCrossingsWithCross1Block(
+			POLISH_SIGNAL_WITH_CROSS_1 = REGISTRAR.block(
+					"polish_signal_with_cross_1",
+					() -> new PolishSignalWithCross1Block(
 						BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5).noOcclusion()
 					)
 			).simpleItem().creativeTab(CRRCUtils.CREATIVE_MODE_TAB_NAME).register();
 
-			POLISH_CROSSING_WITH_CROSS_2 = REGISTRAR.block(
-					"polish_crossing_with_cross_2",
-					() -> new PolishCrossingsWithCross2Block(
+			POLISH_SIGNAL_WITH_CROSS_2 = REGISTRAR.block(
+					"polish_signal_with_cross_2",
+					() -> new PolishSignalWithCross2Block(
 						BlockBehaviour.Properties.of().destroyTime(3).explosionResistance(5).noOcclusion()
 					)
 			).simpleItem().creativeTab(CRRCUtils.CREATIVE_MODE_TAB_NAME).register();

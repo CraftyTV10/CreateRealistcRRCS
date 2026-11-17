@@ -2,7 +2,6 @@
 	"format_version": "1.8.0",
 	"animations": {
 		"Zamykanie": {
-			"loop": "hold_on_last_frame",
 			"animation_length": 4.25,
 			"bones": {
 				"szlaban": {
@@ -67,8 +66,7 @@
 			}
 		},
 		"Otwarcie": {
-			"loop": "hold_on_last_frame",
-			"animation_length": 4,
+			"animation_length": 3.75,
 			"bones": {
 				"szlaban": {
 					"rotation": {
@@ -76,15 +74,8 @@
 							"vector": [0, 0, 90]
 						},
 						"2.75": {
-							"vector": [0, 0, 0],
-							"easing": "easeInSine"
-						},
-						"3.25": {
-							"vector": [0, 0, -2.5],
-							"easing": "easeOutQuart"
-						},
-						"3.75": {
-							"vector": [0, 0, 0]
+							"vector": [0, 0, -90],
+							"easing": "linear"
 						}
 					}
 				},
@@ -94,15 +85,17 @@
 							"vector": [0, 0, -90]
 						},
 						"1.5": {
-							"vector": [0, 0, -58.41],
+							"vector": [7.7589, -19.3164, 10.1256],
 							"easing": "easeInSine"
 						},
 						"2.75": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
-						},
-						"3.5": {
-							"vector": [0, 0, 0]
+							"pre": {
+								"vector": [0, 0, 90]
+							},
+							"post": {
+								"vector": [0, 0, 90]
+							},
+							"lerp_mode": "catmullrom"
 						}
 					}
 				}

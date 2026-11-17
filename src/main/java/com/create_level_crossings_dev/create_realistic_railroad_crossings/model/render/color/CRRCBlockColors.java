@@ -80,8 +80,7 @@ public final class CRRCBlockColors {
 			return 0xFFFFFFFF;
 		}
 
-		DualLightStatus status =
-			state.getValue(CRRCBlockStateProperties.DUAL_LIGHT_STATUS);
+		DualLightStatus status = state.getValue(CRRCBlockStateProperties.DUAL_LIGHT_STATUS);
 
 
 		return switch (status) {
@@ -139,8 +138,8 @@ public final class CRRCBlockColors {
 
 		event.register(
 			CRRCBlockColors::getDualLightColor,
-			CRRCBlocks.Polish.POLISH_CROSSING_WITH_CROSS_1.get(),
-			CRRCBlocks.Polish.POLISH_CROSSING_WITH_CROSS_2.get()
+			CRRCBlocks.Polish.POLISH_SIGNAL_WITH_CROSS_1.get(),
+			CRRCBlocks.Polish.POLISH_SIGNAL_WITH_CROSS_2.get()
 		);
 	}
 
@@ -170,8 +169,8 @@ public final class CRRCBlockColors {
 					"Unhandled item tint index: " + tintIndex
 				);
 			},
-			CRRCBlocks.Polish.POLISH_CROSSING_WITH_CROSS_1.get().asItem(),
-			CRRCBlocks.Polish.POLISH_CROSSING_WITH_CROSS_2.get().asItem()
+			CRRCBlocks.Polish.POLISH_SIGNAL_WITH_CROSS_1.get().asItem(),
+			CRRCBlocks.Polish.POLISH_SIGNAL_WITH_CROSS_2.get().asItem()
 		);
 	}
 }

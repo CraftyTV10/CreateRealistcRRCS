@@ -12,8 +12,8 @@ import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 public class CRRCClient {
     public static final String MODID = "create_realistic_railroad_crossings";
 
-    public CRRCClient(IEventBus modEventBus) {
-        modEventBus.addListener(CRRCClient::registerRenderers);
+    public CRRCClient(IEventBus modBus) {
+        modBus.addListener(CRRCClient::registerRenderers);
     }
     @SubscribeEvent
     public static void registerRenderers(final EntityRenderersEvent.RegisterRenderers event) {

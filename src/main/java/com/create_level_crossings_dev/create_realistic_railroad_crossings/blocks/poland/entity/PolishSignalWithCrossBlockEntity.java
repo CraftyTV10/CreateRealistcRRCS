@@ -5,13 +5,12 @@ import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCBlockEntities;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCSoundEvents;
 import net.minecraft.core.BlockPos;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
-public class PolishCrossingsWithCrossBlockEntity extends BlockEntity {
+public class PolishSignalWithCrossBlockEntity extends BlockEntity {
 
 	private boolean audioOn = false;
 
@@ -24,12 +23,12 @@ public class PolishCrossingsWithCrossBlockEntity extends BlockEntity {
 
 	private boolean powered;
 
-	public PolishCrossingsWithCrossBlockEntity(
+	public PolishSignalWithCrossBlockEntity(
 		BlockPos pos,
 		BlockState state
 	) {
 		super(
-			CRRCBlockEntities.Polish.POLISH_CROSSING_WITH_CROSS.get(),
+			CRRCBlockEntities.Polish.POLISH_SIGNAL_WITH_CROSS.get(),
 			pos,
 			state
 		);
@@ -39,7 +38,7 @@ public class PolishCrossingsWithCrossBlockEntity extends BlockEntity {
 		Level level,
 		BlockPos pos,
 		@NotNull BlockState state,
-		@NotNull PolishCrossingsWithCrossBlockEntity be
+		@NotNull PolishSignalWithCrossBlockEntity be
 	) {
 
 		if (level == null) {

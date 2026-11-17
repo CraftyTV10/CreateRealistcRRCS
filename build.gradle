@@ -20,6 +20,13 @@ sourceSets.main.resources {
     exclude("src/generated/**/.cache")
 }
 
+jar {
+    exclude '**/*.py'
+    exclude '**/*.pyc'
+    exclude '**/__pycache__/**'
+}
+
+
 repositories {
     maven {
         name = "Create, Ponder, Flywheel"

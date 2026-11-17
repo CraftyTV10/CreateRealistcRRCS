@@ -1,5 +1,6 @@
 package com.create_level_crossings_dev.create_realistic_railroad_crossings;
 
+import com.create_level_crossings_dev.create_realistic_railroad_crossings.model.render.color.CRRCBlockColors;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCBlockEntities;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCBlocks;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCItems;
@@ -7,6 +8,7 @@ import com.create_level_crossings_dev.create_realistic_railroad_crossings.regist
 import com.footdablit2310.footlib.api.easy_register.FootEasyRegisterSystem;
 import com.footdablit2310.footlib.api.easy_register.config.TabConfig;
 import net.minecraft.network.chat.Component;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import org.slf4j.Logger;
 
@@ -17,7 +19,7 @@ import net.neoforged.fml.common.Mod;
 import java.util.Optional;
 
 
-@Mod(CreateRealisticRailroadCrossings.MODID)
+@Mod(value=CreateRealisticRailroadCrossings.MODID, dist={Dist.CLIENT, Dist.DEDICATED_SERVER})
 public class CreateRealisticRailroadCrossings {
 
     public static final String MODID = "create_realistic_railroad_crossings";
@@ -34,15 +36,18 @@ public class CreateRealisticRailroadCrossings {
         CRRCBlockEntities.register();
         CRRCSoundEvents.register();
         CRRCItems.register();
+        modbus.addListener(CRRCBlockColors::registerBlockColors);
+        modbus.addListener(CRRCBlockColors::registerItemColors);
 
-        // Do this last
+        // Register CreativeTab last so it can be populated beforehand.
+
 	    REGISTRAR.registerCreativeTab(
 		    new TabConfig(
                 "create_realistic_railroad_crossings_creative_mode_tab",
 			    Component.literal(MODNAME),
 			    Optional.empty(),
 			    true,
-			    89,
+			    96,
 			    Optional.empty(),
 			    Optional.empty(),
 			    Optional.empty()

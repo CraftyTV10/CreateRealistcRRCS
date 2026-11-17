@@ -1,6 +1,6 @@
 package com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland;
 
-import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.entity.PolishCrossingsWithCrossBlockEntity;
+import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.entity.PolishSignalWithCrossBlockEntity;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.state_properties.CRRCBlockStateProperties;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.state_properties.DualLightStatus;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCBlockEntities;
@@ -29,7 +29,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Map;
 import java.util.Objects;
 
-public class PolishCrossingsWithCross2Block extends Block implements EntityBlock {
+public class PolishSignalWithCross2Block extends Block implements EntityBlock {
 
 	public static final EnumProperty<DualLightStatus> DUAL_LIGHT_STATUS = Objects.requireNonNull(CRRCBlockStateProperties.DUAL_LIGHT_STATUS);
 	public static final EnumProperty<Direction> FACING = Objects.requireNonNull(BlockStateProperties.HORIZONTAL_FACING);
@@ -64,7 +64,7 @@ public class PolishCrossingsWithCross2Block extends Block implements EntityBlock
 	private static final Map<Direction, VoxelShape> ROTATED_SHAPES = VoxelShapeRotationUtil.cacheRotations(SHAPE);
 
 
-	public PolishCrossingsWithCross2Block(BlockBehaviour.Properties properties) {
+	public PolishSignalWithCross2Block(BlockBehaviour.Properties properties) {
 		super(properties);
 		registerDefaultState(stateDefinition.any()
 			.setValue(DUAL_LIGHT_STATUS, DualLightStatus.BOTH_OFF)
@@ -90,7 +90,7 @@ public class PolishCrossingsWithCross2Block extends Block implements EntityBlock
 		if (!level.isClientSide) {
 			BlockEntity be = level.getBlockEntity(pos);
 
-			if (be instanceof PolishCrossingsWithCrossBlockEntity crossing) {
+			if (be instanceof PolishSignalWithCrossBlockEntity crossing) {
 				crossing.updateRedstone();
 			}
 		}
@@ -106,11 +106,11 @@ public class PolishCrossingsWithCross2Block extends Block implements EntityBlock
 
 	@Override
 	public @Nullable BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
-		return new PolishCrossingsWithCrossBlockEntity(pos, state);
+		return new PolishSignalWithCrossBlockEntity(pos, state);
 	}
 
 	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(@NotNull Level level, @NotNull BlockState state, @NotNull BlockEntityType<T> type) {
-		return createTickerHelper(type, CRRCBlockEntities.Polish.POLISH_CROSSING_WITH_CROSS.get(), PolishCrossingsWithCrossBlockEntity::tick);
+		return createTickerHelper(type, CRRCBlockEntities.Polish.POLISH_SIGNAL_WITH_CROSS.get(), PolishSignalWithCrossBlockEntity::tick);
 	}
 
 	@Override
