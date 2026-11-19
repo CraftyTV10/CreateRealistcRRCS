@@ -1,6 +1,6 @@
 {
   "block.create_realistic_railroad_crossings.polish_gate": "Polish Railway Crossing Gate",
   "block.create_realistic_railroad_crossings.polish_gate_long": "Long Polish Railway Crossing Gate",
-  "block.create_realistic_railroad_crossings.polish_crossing_with_cross_1": "Polish Railway Crossing Lights Single Crossbuck",
-  "block.create_realistic_railroad_crossings.polish_crossing_with_cross_2": "Polish Railway Crossing Lights Dual Crossbucks"
+  "block.create_realistic_railroad_crossings.polish_signal_with_cross_1": "Polish Railway Crossing Signal Single Crossbuck",
+  "block.create_realistic_railroad_crossings.polish_signal_with_cross_2": "Polish Railway Crossing Signal Dual Crossbucks"
 }

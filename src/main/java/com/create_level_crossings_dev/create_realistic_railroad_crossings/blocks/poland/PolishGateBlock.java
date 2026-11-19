@@ -128,7 +128,8 @@ public class PolishGateBlock extends Block implements EntityBlock {
         return createTickerHelper(type, CRRCBlockEntities.Polish.POLISH_GATE.get(), PolishGateBlockEntity::tick);
     }
 
-    private static final VoxelShape BASE_SHAPE = Block.box(4, 0, 4, 12, 10, 12);
+    //TODO: Fix hitboxes
+    private static final VoxelShape BASE_SHAPE = Block.box(0, 0, 0, 16, 16, 16);
 
     @Override
     public @NotNull VoxelShape getShape(
