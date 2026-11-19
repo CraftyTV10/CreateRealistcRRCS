@@ -1,3 +1,8 @@
 *.bbmodel binary
 *.mtl text
 *.obj binary
+*.png binary
+*.ogg binary
+*.mp3 binary
+*.mp4 binary
+*.wav binary
