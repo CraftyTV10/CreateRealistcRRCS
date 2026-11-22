@@ -24,12 +24,14 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Objects;
+
 import static com.footdablit2310.footlib.api.common.hitbox.VoxelShapeRotationUtil.rotateShape;
 
 public class PolishGateBlock extends Block implements EntityBlock {
 
-    public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
-    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final BooleanProperty POWERED = Objects.requireNonNull(BlockStateProperties.POWERED);
+    public static final DirectionProperty FACING = Objects.requireNonNull(BlockStateProperties.HORIZONTAL_FACING);
 
     public PolishGateBlock(Properties properties) {
         super(properties);

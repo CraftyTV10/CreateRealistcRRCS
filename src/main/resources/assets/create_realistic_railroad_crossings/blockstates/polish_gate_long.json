@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=north,powered=false": { "model": "create_realistic_railroad_crossings:block/polish_gate_long", "y": 0 },
+    "facing=east,powered=false":  { "model": "create_realistic_railroad_crossings:block/polish_gate_long", "y": 90 },
+    "facing=south,powered=false": { "model": "create_realistic_railroad_crossings:block/polish_gate_long", "y": 180 },
+    "facing=west,powered=false":  { "model": "create_realistic_railroad_crossings:block/polish_gate_long", "y": 270 },
+    "facing=north,powered=true":  { "model": "create_realistic_railroad_crossings:block/polish_gate_long", "y": 0 },
+    "facing=east,powered=true":   { "model": "create_realistic_railroad_crossings:block/polish_gate_long", "y": 90 },
+    "facing=south,powered=true":  { "model": "create_realistic_railroad_crossings:block/polish_gate_long", "y": 180 },
+    "facing=west,powered=true":   { "model": "create_realistic_railroad_crossings:block/polish_gate_long", "y": 270 }
+  }
+}
