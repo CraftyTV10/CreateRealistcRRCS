@@ -1,7 +1,7 @@
 * text=auto
-*.bbmodel binary
-*.mtl text
-*.obj binary
+*.bbmodel binary linguist-generated=true
+*.mtl text linguist-generated=true
+*.obj binary linguist-generated=true
 *.png binary
 *.ogg binary
 *.mp3 binary
@@ -10,3 +10,5 @@
 *.jar binary
 *.sha256 binary
 *.md5 binary
+gradle/wrapper/* -diff linguist-generated=true
+
