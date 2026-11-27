@@ -26,6 +26,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
@@ -61,8 +62,16 @@ public class PolishSignalWithCross2Block extends Block implements EntityBlock {
 		CROSSBUCKS
 	).move(0.5, 0, 0.5);
 
-	private static final Map<Direction, VoxelShape> ROTATED_SHAPES = VoxelShapeRotationUtil.cacheRotations(SHAPE);
+	private static final Map<Direction, VoxelShape> ROTATED_SHAPES = cacheRotations(SHAPE);
 
+	private static Map<Direction, VoxelShape> cacheRotations(@NotNull VoxelShape shape) {
+		Direction[] directions = {Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
+		Map<Direction, VoxelShape> rotationsOfShapes = new HashMap<>();
+		for (Direction direction : directions) {
+			rotationsOfShapes.put(direction, VoxelShapeRotationUtil.rotateShape(direction, shape));
+		}
+		return rotationsOfShapes;
+	}
 
 	public PolishSignalWithCross2Block(BlockBehaviour.Properties properties) {
 		super(properties);
@@ -73,7 +82,7 @@ public class PolishSignalWithCross2Block extends Block implements EntityBlock {
 	}
 
 	@Override
-	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+	protected void createBlockStateDefinition(StateDefinition.@NotNull Builder<Block, BlockState> builder) {
 		// this is where the properties are actually added to the state
 		builder.add(DUAL_LIGHT_STATUS);
 		builder.add(FACING);
@@ -81,11 +90,11 @@ public class PolishSignalWithCross2Block extends Block implements EntityBlock {
 
 	@Override
 	protected void neighborChanged(@NotNull BlockState state,
-	                               Level level,
-	                               @NotNull BlockPos pos,
-	                               @NotNull Block neighborBlock,
-	                               @NotNull BlockPos neighborPos,
-	                               boolean movedByPiston) {
+								   @NotNull Level level,
+								   @NotNull BlockPos pos,
+								   @NotNull Block neighborBlock,
+								   @NotNull BlockPos neighborPos,
+								   boolean movedByPiston) {
 
 		if (!level.isClientSide) {
 			BlockEntity be = level.getBlockEntity(pos);
@@ -114,7 +123,7 @@ public class PolishSignalWithCross2Block extends Block implements EntityBlock {
 	}
 
 	@Override
-	public BlockState getStateForPlacement(BlockPlaceContext context) {
+	public BlockState getStateForPlacement(@NotNull BlockPlaceContext context) {
 		return this.defaultBlockState().setValue(
 			FACING,
 			context.getHorizontalDirection().getOpposite()
@@ -123,10 +132,10 @@ public class PolishSignalWithCross2Block extends Block implements EntityBlock {
 
 	@Override
 	public @NotNull VoxelShape getShape(
-		BlockState state,
-		@NotNull BlockGetter level,
-		@NotNull BlockPos pos,
-		@NotNull CollisionContext context) {
+			@NotNull BlockState state,
+			@NotNull BlockGetter level,
+			@NotNull BlockPos pos,
+			@NotNull CollisionContext context) {
 		return ROTATED_SHAPES.get(state.getValue(FACING));
 	}
 
