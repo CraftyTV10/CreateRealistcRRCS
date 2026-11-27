@@ -1,4 +1,4 @@
-Copyright (C) 2026 Create Realistic Railroad Crossing Dev. All Rights Reserved.
+Copyright (C) 2026 Create Realistic Railroad Crossings Dev. All Rights Reserved.
 
 This software and all associated documentation, source code, assets, 
 textures, models, animations, and sound files are the exclusive property 
