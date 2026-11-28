@@ -1,0 +1,25 @@
+{
+  "default": {
+    "enabled": true,
+    "rotation": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "pivot": [
+      0.5,
+      0,
+      0.5
+    ],
+    "smooth": true,
+    "interpolation_ticks": 10,
+    "rotation_step_degrees": 1,
+    "allowed_axes": [
+      "x",
+      "y",
+      "z",
+      "w"
+    ]
+  }
+}

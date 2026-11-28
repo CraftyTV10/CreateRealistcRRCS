@@ -11,6 +11,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
@@ -80,6 +81,11 @@ public class PolishSignalWithCross1Block extends Block implements EntityBlock {
 			.setValue(DUAL_LIGHT_STATUS, DualLightStatus.BOTH_OFF)
 			.setValue(FACING, Direction.NORTH)
 		);
+	}
+
+	@Override
+	public @NotNull RenderShape getRenderShape(@NotNull BlockState state) {
+		return RenderShape.ENTITYBLOCK_ANIMATED;
 	}
 
 	@Override

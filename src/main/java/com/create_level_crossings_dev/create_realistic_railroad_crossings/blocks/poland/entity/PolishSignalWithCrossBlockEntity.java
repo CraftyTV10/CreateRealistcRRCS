@@ -4,13 +4,18 @@ import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.state_properties.DualLightStatus;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCBlockEntities;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCSoundEvents;
+import com.footdablit2310.footlib.api.generic_base.block.entity.FootRotatableBlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
-public class PolishSignalWithCrossBlockEntity extends BlockEntity {
+public class PolishSignalWithCrossBlockEntity extends FootRotatableBlockEntity {
 
 	private boolean audioOn = false;
 
@@ -40,6 +45,10 @@ public class PolishSignalWithCrossBlockEntity extends BlockEntity {
 		@NotNull BlockState state,
 		@NotNull PolishSignalWithCrossBlockEntity be
 	) {
+
+        if (be.tickRotation()) {
+            be.setChanged();
+        }
 
 		if (level == null) {
 			return;
@@ -158,4 +167,21 @@ public class PolishSignalWithCrossBlockEntity extends BlockEntity {
 	public boolean isPowered() {
 		return powered;
 	}
+
+    @Override
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
+        CompoundTag tag = new CompoundTag();
+        saveAdditional(tag, registries);
+        return tag;
+    }
+
+    @Override
+    public void handleUpdateTag(CompoundTag tag, HolderLookup.Provider registries) {
+        loadAdditional(tag, registries);
+    }
+
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
 }
