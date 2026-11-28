@@ -1,6 +1,7 @@
 package com.create_level_crossings_dev.create_realistic_railroad_crossings;
 
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.renderer.PolishGateRender;
+import com.create_level_crossings_dev.create_realistic_railroad_crossings.blocks.poland.renderer.PolishSignalWithCrossRender;
 import com.create_level_crossings_dev.create_realistic_railroad_crossings.registry.CRRCBlockEntities;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -18,5 +19,6 @@ public class CRRCClient {
     @SubscribeEvent
     public static void registerRenderers(final EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(CRRCBlockEntities.Polish.POLISH_GATE.get(), PolishGateRender::new);
+        event.registerBlockEntityRenderer(CRRCBlockEntities.Polish.POLISH_SIGNAL_WITH_CROSS.get(), PolishSignalWithCrossRender::new);
     }
 }
