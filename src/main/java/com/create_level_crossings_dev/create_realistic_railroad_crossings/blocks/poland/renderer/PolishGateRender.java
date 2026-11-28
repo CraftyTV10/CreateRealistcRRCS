@@ -27,7 +27,7 @@ public class PolishGateRender extends GeoBlockRenderer<PolishGateBlockEntity> {
 
         // Apply the user rotation around the configured block pivot.
         poseStack.translate(-0.5, 0.0, -0.5);
-        RotationRenderHelper.apply(poseStack, block);
+        RotationRenderHelper.apply(poseStack, animatable);
         poseStack.translate(0.5, 0.0, 0.5);
 
         // Preserve the existing 2-pixel right offset relative to the facing.
